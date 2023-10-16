@@ -1,11 +1,119 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+<head>
+  <title><%= title %></title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+  <script type="text/javascript" src="/javascripts/main.js"></script>
+</head>
+<body>
+<div class="main">
+  <div class="inven">
+    <div class="inven_icon">
+      <img src="/images/bag.png"/>
+    </div>
+    <div class="inven_detail">
+      <div class="item_view">
+        <div class="item_view_top">
+          <div class="item_img">
+            <img class="item_img_src" src=""/>
+          </div>
+          <div class="item_code">
+          </div>
+        </div>
+        <div class="item_view_bottom">
+
+        </div>
+        <div class="item_back_btn">
+          돌아가기
+        </div>
+      </div>
+
+      <div class="item_line">
+        <div class="item">
+          <div class="item_detail">
+            <img src="https://velog.velcdn.com/images/kimdeokjoong/post/83cc0972-7f77-47e9-9476-bd6363615090/image.png"/>
+            <div>0000</div>
+          </div>
+        </div>
+        <div class="item">
+        </div>
+        <div class="item">
+        </div>
+        <div class="item">
+        </div>
+      </div>
+
+      <div class="item_line">
+        <div class="item">
+        </div>
+        <div class="item">
+        </div>
+        <div class="item">
+        </div>
+        <div class="item">
+        </div>
+      </div>
+
+      <div class="item_line">
+        <div class="item">
+        </div>
+        <div class="item">
+        </div>
+        <div class="item">
+        </div>
+        <div class="item">
+        </div>
+      </div>
+
+      <div class="item_line">
+        <div class="item">
+        </div>
+        <div class="item">
+        </div>
+        <div class="item">
+        </div>
+        <div class="item">
+        </div>
+      </div>
+
+      <div class="item_line">
+        <div class="item">
+        </div>
+        <div class="item">
+        </div>
+        <div class="item">
+        </div>
+        <div class="item">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="play_board">
+    <div class="monit">
+      <div class="main_monit">
+        게임을 시작하려면 아래 키워드에 "시작"을 입력하세요.<br/><br/>
+
+        ※ 우측상단에는 인벤토리가 있습니다. 클릭으로 확인할 수 있습니다.<br/><br/>
+
+        ※ 개발자모드와 헛짓거리를 하지말라고 하면 더 할거같아서 마음대로 사용하세요.<br/><br/>
+
+        ※ 쿠키는 게임진행에 아주 중요한 역할입니다. 수작부리면 게임을 초기화 해야할 수 있습니다.<br/><br/>
+
+        ※ 로 시작하는 지문은 게임 진행에 있어 정말 중요한 공지사항입니다.<br/>
+        반드시 꼼꼼하게 읽어주세요<br/><br/>
+
+        ※ PC 플레이를 적극 권장합니다.
+      </div>
+    </div>
+    <div class="input_area">
+      <input class="input_board"/>
+      <div class="input_text">
+        확인
+      </div>
+    </div>
+  </div>
+</div>
+</body>
 </html>
