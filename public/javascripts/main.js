@@ -1,6 +1,7 @@
 window.onload = function(){
     document.getElementsByClassName('inven_icon')[0].addEventListener('click', togleInven)
     document.getElementsByClassName('item_back_btn')[0].addEventListener('click', backInven)
+    document.getElementsByClassName('input_text')[0].addEventListener('click', viewProblem)
     addItemEvent()
 }
 let isInvenOpen = false
@@ -46,6 +47,21 @@ const viewItem = (code) => {
             document.getElementsByClassName("item_code")[0].innerHTML = response.data.data.code
             document.getElementsByClassName("item_img_src")[0].src = response.data.data.src
             document.getElementsByClassName("item_view_bottom")[0].innerHTML = response.data.data.detail
+        })
+        .catch(error=>{
+            console.log(error);
+        })
+
+}
+
+const viewProblem = () => {
+    axios({
+        method: 'post',
+        url: '/output/problem/view',
+        data: {}
+    })
+        .then(response=>{
+            console.log(response)
         })
         .catch(error=>{
             console.log(error);

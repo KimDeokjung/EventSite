@@ -1,7 +1,19 @@
-function response(success, data) {
+const jwt = require('jsonwebtoken');
+const key = "secretKeysecretKeysecretKeysecretKeysecretKeysecretKeysecretKeysecretKeysecretKeysecretKey"
+
+const response = (success, data) => {
     const ret = { success };
     if (data) ret.data = data;
     return ret;
+}
+
+const decodeJWT = (data) => {
+    try {
+        const realData = jwt.verify(data, key);
+        return realData
+    } catch (error) {
+        return false
+    }
 }
 
 exports.getResult =  async() => {
@@ -60,4 +72,30 @@ exports.getItem = async(code) => {
         }
         return response(false, result);
     }
+}
+
+exports.getProblem = async(req, res, next) => {
+    const answer = req.body.answer
+    const log = req.cookies.log
+
+
+    let token = jwt.sign(
+        {
+            type: "JWT",
+            nickname: "nickname",
+            profile: "profile",
+        },
+        key,
+        {
+            expiresIn: "100m"
+        }
+    );
+
+    res.cookie('log', token, { maxAge: 900000, httpOnly: true });
+
+    console.log("-=-=-=-=-=-=-=")
+    console.log(req.cookies.rememberme)
+    console.log(token)
+    decodeJWT(req.cookies.log)
+    console.log("-=-=-=-=-=-=-=")
 }

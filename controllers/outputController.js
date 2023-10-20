@@ -11,3 +11,8 @@ exports.item = async(req, res, next) => {
     const data = await abc.getItem(code);
     res.json(data);
 }
+
+exports.problem = async(req, res, next) => {
+    const data = await abc.getProblem(req, res, next);
+    res.json(data);
+}
