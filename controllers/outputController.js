@@ -6,6 +6,11 @@ exports.submit = async(req, res, next) => {
     res.json(data);
 }
 
+exports.items = async(req, res, next) => {
+    const data = await abc.getItems(req, res, next);
+    res.json(data);
+}
+
 exports.item = async(req, res, next) => {
     const code = req.body.code;
     const data = await abc.getItem(code);
