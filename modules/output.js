@@ -41,14 +41,44 @@ const pageMove = (page, item, res) => {
     const nineteenPage = worngPage
     const twentyPage = "2자리의 숫자 자물쇠이다.<br/><br/>( ? / 입구 )"
     const twentyOnePage = worngPage
-    const twentyTwoPage = ""
-    const twentyThreePage = ""
-    const twentyFourPage = ""
-    const twentyFivePage = ""
-    const twentySixPage = ""
-    const twentySevenPage = ""
-    const twentyEightPage = ""
-    const twentyNinePage = ""
+    const twentyTwoPage = "자물쇠를 풀고 들어왔지만<br/><br/>너무 캄캄해서 아무것도 보이지 않는다.<br/><br/>( 불켜기 )"
+    const twentyThreePage = worngPage
+    const twentyFourPage = "불켜기 게임"
+    const twentyFivePage = "불이 켜지자 애플 고시원 내부가 보인다.<br/><br/>엄청나게 호화로운 내부였다.<br/><br/>언뜻 둘러보니 부엌과 안방으로 가는 길이 보였다.<br/><br/>( 부엌 / 안방 )"
+    const twentySixPage = worngPage
+    const twentySevenPage = "부엌에 들어오자 이것저것 많이 어질러져 있다.<br/><br/>마치 사람의 손길이 오랫동안 이어지지 않은 것 같다.<br/><br/>그중에서도 서랍과 식칼이 눈에 띈다.<br/><br/>( ? / 입구 )"
+    const twentyEightPage = worngPage
+    const twentyNinePage = "[\"식칼\" 획득]<br/>-아이템 코드: 3157-<br/><br/> 사용할 곳이 있을수도 있으니 챙겨두자. <br/><br/>( 부엌 )"
+    const thirtyPage = worngPage
+    const thirtyOnePage = "서랍을 열려고 하자 어디선가 목소리가 들린다. <br/><br/>\"서랍을 열고자 한다면 다음 질문에 대답해라.<br/>김용민은 무엇인가?\"<br/><br/>아주 쉬운 문제를 말해주고 있는 것 같다.<br/><br/>얼른 정답을 말하고 서랍을 열어보자<br/><br/>( 천재 / 개천재 / 우주천재 / 부엌 )"
+    const thirtyTwoPage = worngPage
+    const thirtyThreePage = "대답하기 전에는 여기서 못빠져나가는....ㅋ<br/><br/>( 천재 / 개천재 / 우주천재 )"
+    const thirtyFourPage = "[\"사진(1/2)\" 획득]<br/>-아이템 코드 : 1147-<br/><br/> 서랍을 열어보니 찢어져있는 사진이 들어있다.<br/><br/>나머지 부분도 모아야지 정확한 모습을 알 수 있을것 같다.<br/><br/>( 부엌 )"
+    const thirtyFivePage = worngPage
+    const thirtySixPage = "안방에 들어가려고 시도했지만<br/><br/>도어락으로 잠겨있다.<br/><br/>( ? / 입구 )"
+    const thirtySevenPage = worngPage
+    const thirtyEightPage = "4자리의 키패드가 있으며 <br/><br/>아래에는 이상한 문자들이 나열되어 있다.<br/><br/>3 - 3 - 5 - 4 - a - b - c - d<br/>abcd = ?<br/><br/>( ? / 입구 )"
+    const thirtyNinePage = worngPage
+    const fortyPage = "[\"인형\" 획득]<br/>- 아이템 코드 : 2786 -<br/><br/>안방으로 들어가자 인형이 떨어져있다.<br/><br/>인형 말고는 딱히 특별한 점이 안보이는 공간이다.<br/><br/>( 입구 )"
+    const fortyOnePage = worngPage
+    const fortyTwoPage = "[\"인형\" 파손]<br/>- 아이템 코드: 2786 -<br/><br/>[\"망가진인형\" 획득]<br/>- 아이템 코드: 4174 -<br/><br/>[\"사진(1/2)\" 획득]<br/>- 아이템 코드: 7411 -<br/><br/>인형을 칼로 살해하니 안에 내용물이 나왔다.<br/><br/>찢어져있는 사진이 들어있는데 어디쓰이는 걸까....?<br/><br/>( 입구 )"
+    const fortyThreePage = worngPage
+    const fortyFourPage = "<img src=\"https://velog.velcdn.com/images/ejrwnd1103/post/d683a8b8-c603-42c9-a5b7-600abcb4d3e9/image.png\"/>사진이 완성되자 빛이 나오며<br/>목소리가 들렸습니다.<br/><br/> ( 아무입력 )"
+    const fortyFivePage = "<img src=\"https://velog.velcdn.com/images/ejrwnd1103/post/d683a8b8-c603-42c9-a5b7-600abcb4d3e9/image.png\"/>이까지 오시느라 수고 하셨습니다.<br/><br/>수고하신 플레이어에게 현재 배낭에 있는 물건 중 하나를 선물로 드릴게요 <br/><br/> 어떤걸 가지시겠어요?<br/><br/> ( 아무입력 )"
+    const fortySixPage = "<img src=\"https://velog.velcdn.com/images/ejrwnd1103/post/d683a8b8-c603-42c9-a5b7-600abcb4d3e9/image.png\"/>알겠습니다. 이쪽으로 오셔서 상품을 수령하세요.<br/><br/> ( 아무입력 )"
+    const fortySevenPage = ""
+    const fortyEightPage = ""
+    const fortyNinePage = ""
+    const fiftyPage = ""
+    const fiftyOnePage = ""
+    const fiftyTwoPage = ""
+    const fiftyThreePage = ""
+    const fiftyFourPage = ""
+    const fiftyFivePage = ""
+    const fiftySixPage = ""
+    const fiftySevenPage = ""
+    const fiftyEightPage = ""
+    const fiftyNinePage = ""
 
     const pageData = [
         zeroPage, onePage, twoPage, threePage, fourPage,
@@ -56,7 +86,13 @@ const pageMove = (page, item, res) => {
         tenPage, elevenPage, twelvePage, thirteenPage, fourteenPage,
         fifteenPage, sixteenPage, seventeenPage, eighteenPage, nineteenPage,
         twentyPage, twentyOnePage, twentyTwoPage, twentyThreePage, twentyFourPage,
-        twentyFivePage, twentySixPage, twentySevenPage, twentyEightPage, twentyNinePage
+        twentyFivePage, twentySixPage, twentySevenPage, twentyEightPage, twentyNinePage,
+        thirtyPage, thirtyOnePage, thirtyTwoPage, thirtyThreePage, thirtyFourPage,
+        thirtyFivePage, thirtySixPage, thirtySevenPage, thirtyEightPage, thirtyNinePage,
+        fortyPage, fortyOnePage, fortyTwoPage, fortyThreePage, fortyFourPage,
+        fortyFivePage, fortySixPage, fortySevenPage, fortyEightPage, fortyNinePage,
+        fiftyPage, fiftyOnePage, fiftyTwoPage, fiftyThreePage, fiftyFourPage,
+        fiftyFivePage, fiftySixPage, fiftySevenPage, fiftyEightPage, fiftyNinePage
     ]
 
     let token = jwt.sign({stage: page, item: item,}, key, {expiresIn: "100m"});
@@ -66,6 +102,15 @@ const pageMove = (page, item, res) => {
         log: page,
         page: pageData[page]
     });
+}
+
+const addItem = (bag, item) => {
+    if (bag.includes(item)) {
+        return bag
+    }else {
+        bag.push(item)
+        return bag
+    }
 }
 
 exports.getResult =  async() => {
@@ -124,6 +169,16 @@ exports.getItems = async(req, res, next) => {
             code: "1147",
             src: "https://velog.velcdn.com/images/kimdeokjoong/post/3886cec4-e0fc-429d-8f7f-b7d887e9b5dc/image.png"
         },
+
+        "7411": {
+            code: "7411",
+            src: "https://velog.velcdn.com/images/kimdeokjoong/post/6025e9ab-ae86-41f0-a1e1-882a0d211166/image.png"
+        },
+
+        "9999": {
+            code: "9999",
+            src: "https://velog.velcdn.com/images/ejrwnd1103/post/d683a8b8-c603-42c9-a5b7-600abcb4d3e9/image.png"
+        }
     }
 
     let item = logData.item
@@ -181,30 +236,44 @@ exports.getItem = async(code) => {
             case "3157":
                 result.src = "https://velog.velcdn.com/images/kimdeokjoong/post/f287d5a9-9cc1-4bd8-b976-18583c09b86d/image.png"
                 result.code = "            이름: 장미칼<br><br>\n" +
-                    "            코드: 0001<br><br>\n" +
+                    "            코드: 3157<br><br>\n" +
                     "            내구도: 무제한"
                 result.detail = "부엌에서 발견한 날카로운 칼이다. 이상한데 쓰지말고 인형같은걸 자르는거에 도움이 될 수도...?"
                 break
             case "2786":
                 result.src = "https://velog.velcdn.com/images/kimdeokjoong/post/e9c187f6-960f-47cf-97ab-ca7d2c00ddda/image.png"
                 result.code = "            이름: 인형<br><br>\n" +
-                    "            코드: 0001<br><br>\n" +
+                    "            코드: 2786<br><br>\n" +
                     "            내구도: 무제한"
                 result.detail = "귀여운 인형이다."
                 break
             case "4174":
                 result.src = "https://velog.velcdn.com/images/kimdeokjoong/post/4902d0d1-c79e-499c-8cbf-ff832d920b38/image.png"
                 result.code = "            이름: 망가진인형<br><br>\n" +
-                    "            코드: 0001<br><br>\n" +
+                    "            코드: 4174<br><br>\n" +
                     "            내구도: 무제한"
                 result.detail = "욕심으로 무참히 망가진 인형이다. 형태도 알아볼 수 없을정도로 망가졌다...."
                 break
             case "1147":
                 result.src = "https://velog.velcdn.com/images/kimdeokjoong/post/3886cec4-e0fc-429d-8f7f-b7d887e9b5dc/image.png"
                 result.code = "            이름: 사진(1/2)<br><br>\n" +
-                    "            코드: 0001<br><br>\n" +
+                    "            코드: 1147<br><br>\n" +
                     "            내구도: 무제한"
                 result.detail = "사진의 일부분이다. 나머지 반은 어디에 있지??"
+                break
+            case "7411":
+                result.src = "https://velog.velcdn.com/images/kimdeokjoong/post/6025e9ab-ae86-41f0-a1e1-882a0d211166/image.png"
+                result.code = "            이름: 사진(1/2)<br><br>\n" +
+                    "            코드: 7411<br><br>\n" +
+                    "            내구도: 무제한"
+                result.detail = "사진의 일부분이다. 나머지 반은 어디에 있지??"
+                break
+            case "9999":
+                result.src = "https://velog.velcdn.com/images/ejrwnd1103/post/d683a8b8-c603-42c9-a5b7-600abcb4d3e9/image.png"
+                result.code = "            이름: 사진<br><br>\n" +
+                    "            코드: 9999<br><br>\n" +
+                    "            내구도: 무제한"
+                result.detail = "개쩌는 용님의 사진"
                 break
             default:
                 result.src = "https://velog.velcdn.com/images/kimdeokjoong/post/e30b82aa-3d45-4b37-ac2e-ef8407369d33/image.png"
@@ -233,14 +302,24 @@ exports.getProblem = async(req, res, next) => {
     const answer = req.body.answer
     const log = req.cookies.log
     const logData = decodeJWT(log)
-    console.log("-=-=-=-=-=-=")
-    console.log(logData)
     let item = logData.item
-    console.log(item)
-
 
     if (!logData) {
         return pageMove(0, ["0000"], res)
+    }
+
+    if (answer === "5943" && item.includes("3157") && item.includes("2786")) {
+        item = item.filter((element) => element !== '2786');
+        item = addItem(item, "4174")
+        item = addItem(item, "7411")
+        return pageMove(42, item, res)
+    }
+
+    if (answer === "8558" && item.includes("1147") && item.includes("7411")) {
+        item = item.filter((element) => element !== '1147');
+        item = item.filter((element) => element !== '7411');
+        item = addItem(item, "9999")
+        return pageMove(44, item, res)
     }
 
     switch (logData.stage) {
@@ -260,7 +339,7 @@ exports.getProblem = async(req, res, next) => {
             if (answer === "버리기") {
                 return pageMove(4, item, res)
             }else if(answer === "편지") {
-                item.push("0001")
+                item = addItem(item, "0001")
                 return pageMove(5, item, res)
             } else {
                 return pageMove(3, item, res)
@@ -311,6 +390,7 @@ exports.getProblem = async(req, res, next) => {
             }
         case 10:
             if (answer === "바닥") {
+                item = addItem(item, "1476")
                 return pageMove(12, item, res)
             }else if (answer === "창문") {
                 return pageMove(14, item, res)
@@ -326,7 +406,6 @@ exports.getProblem = async(req, res, next) => {
                 return pageMove(11, item, res)
             }
         case 12:
-            item.push("1476")
             if (answer === "입구") {
                 return pageMove(10, item, res)
             }else {
@@ -380,25 +459,195 @@ exports.getProblem = async(req, res, next) => {
                 return pageMove(19, item, res)
             }
         case 20:
-            break
+            if (answer === "13") {
+                return pageMove(22, item, res)
+            } else if(answer === "입구") {
+                return pageMove(10, item, res)
+            } else {
+                return pageMove(21, item, res)
+            }
         case 21:
             if (answer === "돌아가기") {
                 return pageMove(20, item, res)
             }else {
                 return pageMove(21, item, res)
             }
+        case 22:
+            if (answer === "불켜기") {
+                return pageMove(24, item, res)
+            }else {
+                return pageMove(21, item, res)
+            }
+        case 23:
+            if (answer === "돌아가기") {
+                return pageMove(22, item, res)
+            }else {
+                return pageMove(23, item, res)
+            }
+        case 25:
+            if (answer === "부엌") {
+                return pageMove(27, item, res)
+            }else if (answer === "안방") {
+                return pageMove(36, item, res)
+            }else {
+                return pageMove(26, item, res)
+            }
+        case 26:
+            if (answer === "돌아가기") {
+                return pageMove(25, item, res)
+            }else {
+                return pageMove(26, item, res)
+            }
+        case 27:
+            if (answer === "식칼") {
+                item = addItem(item, "3157")
+                return pageMove(29, item, res)
+            }else if (answer === "서랍") {
+                return pageMove(31, item, res)
+            }else if (answer === "입구") {
+                return pageMove(25, item, res)
+            }else {
+                return pageMove(28, item, res)
+            }
+        case 28:
+            if (answer === "돌아가기") {
+                return pageMove(27, item, res)
+            }else {
+                return pageMove(28, item, res)
+            }
+        case 29:
+            if (answer === "부엌") {
+                return pageMove(27, item, res)
+            }else {
+                return pageMove(30, item, res)
+            }
+        case 30:
+            if (answer === "돌아가기") {
+                return pageMove(29, item, res)
+            }else {
+                return pageMove(30, item, res)
+            }
+        case 31:
+            if (answer === "천재" || answer === "개천재" || answer === "우주천재") {
+                item = addItem(item, "1147")
+                return pageMove(34, item, res)
+            }else if (answer === "부엌") {
+                return pageMove(33, item, res)
+            }else {
+                return pageMove(32, item, res)
+            }
+        case 32:
+            if (answer === "돌아가기") {
+                return pageMove(31, item, res)
+            }else {
+                return pageMove(32, item, res)
+            }
+        case 33:
+            if (answer === "천재" || answer === "개천재" || answer === "우주천재") {
+                item = addItem(item, "1147")
+                return pageMove(34, item, res)
+            }else {
+                return pageMove(33, item, res)
+            }
+        case 34:
+            if (answer === "부엌") {
+                return pageMove(27, item, res)
+            }else {
+                return pageMove(35, item, res)
+            }
+        case 35:
+            if (answer === "돌아가기") {
+                return pageMove(34, item, res)
+            }else {
+                return pageMove(35, item, res)
+            }
+        case 36:
+            if (answer === "도어락") {
+                return pageMove(38, item, res)
+            }else if(answer === "입구") {
+                return pageMove(25, item, res)
+            }else {
+                return pageMove(37, item, res)
+            }
+        case 37:
+            if (answer === "돌아가기") {
+                return pageMove(36, item, res)
+            }else {
+                return pageMove(37, item, res)
+            }
+        case 38:
+            if (answer === "4355") {
+                item = addItem(item, "2786")
+                return pageMove(40, item, res)
+            } else if(answer === "입구") {
+                return pageMove(25, item, res)
+            } else {
+                return pageMove(39, item, res)
+            }
+        case 39:
+            if (answer === "돌아가기") {
+                return pageMove(38, item, res)
+            }else {
+                return pageMove(39, item, res)
+            }
+        case 40:
+            if (answer === "입구") {
+                return pageMove(25, item, res)
+            } else {
+                return pageMove(41, item, res)
+            }
+        case 41:
+            if (answer === "돌아가기") {
+                return pageMove(40, item, res)
+            }else {
+                return pageMove(41, item, res)
+            }
+        case 42:
+            if (answer === "입구") {
+                return pageMove(25, item, res)
+            }else {
+                return pageMove(43, item, res)
+            }
+        case 43:
+            if (answer === "돌아가기") {
+                return pageMove(42, item, res)
+            }else {
+                return pageMove(43, item, res)
+            }
+        case 44:
+            return pageMove(45, item, res)
+        case 45:
+            return pageMove(46, item, res)
         default:
-            break
+            return pageMove(0, ["0000"], res)
+    }
+}
+
+exports.pageLoad = async(req, res, next) => {
+    const log = req.cookies.log
+    const logData = decodeJWT(log)
+    let item = logData.item
+
+    if (!logData) {
+        return pageMove(0, ["0000"], res)
     }
 
+    if (logData.stage === 24 && item.includes("7891")) {
+        return pageMove(25, item, res)
+    }
 
-    let token = jwt.sign({stage: 1, item: ["0000"],}, key, {expiresIn: "100m"});
+    return pageMove(logData.stage, item, res)
+}
 
-    res.cookie('log', token, { maxAge: 900000, httpOnly: true });
+exports.addLight = async(req, res, next) => {
+    const log = req.cookies.log
+    const logData = decodeJWT(log)
+    let item = logData.item
 
-    console.log("-=-=-=-=-=-=-=")
-    console.log(req.cookies.rememberme)
-    console.log(token)
-    decodeJWT(req.cookies.log)
-    console.log("-=-=-=-=-=-=-=")
+    if (!logData) {
+        return pageMove(0, ["0000"], res)
+    }
+
+    item = addItem(item, "7891")
+    return pageMove(logData.stage, item, res)
 }

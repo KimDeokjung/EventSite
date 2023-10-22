@@ -168,6 +168,12 @@ body {
   overflow: auto;
 }
 
+.main_monit > img {
+  width: 200px;
+  height: 300px;
+  margin-right: 32px;
+}
+
 .input_area {
   display: flex;
   align-items: center;

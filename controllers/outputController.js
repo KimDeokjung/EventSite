@@ -21,3 +21,13 @@ exports.problem = async(req, res, next) => {
     const data = await abc.getProblem(req, res, next);
     res.json(data);
 }
+
+exports.pageLoad = async(req, res, next) => {
+    const data = await abc.pageLoad(req, res, next);
+    res.json(data);
+}
+
+exports.addLight = async(req, res, next) => {
+    const data = await abc.addLight(req, res, next);
+    res.json(data);
+}

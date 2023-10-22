@@ -1,12 +1,31 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const screen = document.querySelector("#screen");
-    const result = document.querySelector("#result");
+    pageLoad()
+});
 
-    let startTime; // 시작시간
-    let endTime; // 끝나는 시간
-    let responseTime; // 측정시간
-    let records = []; // 평균 반응 속도 구할 빈 배열
-    let timeoutId; // setTimeout 함수를 담을 변수
+const pageLoad = () => {
+    axios({
+        method: 'post',
+        url: '/output/pageload'
+    })
+        .then(response=>{
+            if (response.data.data.log === 24) {
+                lightPage()
+            }else {
+                window.location.replace("/")
+            }
+        })
+        .catch(error=>{
+            console.log(error);
+        })
+}
+
+const lightPage = () => {
+    const screen = document.querySelector("#screen");
+
+    let startTime;
+    let endTime;
+    let responseTime;
+    let timeoutId;
 
     screen.addEventListener("click", () => {
         if (screen.classList.contains("waiting")) {
@@ -23,14 +42,26 @@ document.addEventListener("DOMContentLoaded", () => {
             screen.classList.replace('ready', 'waiting')
         } else if (screen.classList.contains("now")) {
             endTime = new Date();
-            responseTime = endTime - startTime; // 측정시간
-            records.push(responseTime);
-            console.log(responseTime)
-            let Avg = records.reduce((acc, cur) => {return acc+cur}, 0) / records.length; // 평균 반응 속도
-            //   startTime = null;
-            //   endTime = null; 여기서 null 이거 없어도 되지 않나?
-            screen.classList.replace("now", "waiting");
-            screen.textContent = "클릭해서 시작하세요";
+            responseTime = endTime - startTime;
+
+            if (responseTime <= 120) {
+                axios({
+                    method: 'post',
+                    url: '/output/add/light'
+                })
+                    .then(response=>{
+                        screen.innerHTML = "불은 키는것에 성공했다.<br/><br/>클릭하여 돌아가기";
+                        screen.addEventListener('click', () => {
+                            window.location.replace("/")
+                        })
+                    })
+                    .catch(error=>{
+                        console.log(error);
+                    })
+            }else {
+                screen.classList.replace("now", "waiting");
+                screen.innerHTML = "클릭하여 시작하세요.<br/><br/>현재 기록은 " + String(responseTime) + "ms입니다<br/><br/>느리네 ㅋ";
+            }
         }
     });
-});
+}

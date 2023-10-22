@@ -1,7 +1,9 @@
 window.onload = function(){
+    document.getElementsByClassName('input_board')[0].addEventListener('keyup', enterEvent)
     document.getElementsByClassName('inven_icon')[0].addEventListener('click', togleInven)
     document.getElementsByClassName('item_back_btn')[0].addEventListener('click', backInven)
     document.getElementsByClassName('input_text')[0].addEventListener('click', viewProblem)
+    pageLoad()
 }
 let isInvenOpen = false
 
@@ -61,11 +63,13 @@ const viewItem = (code) => {
         .catch(error=>{
             console.log(error);
         })
-
 }
 
 const viewProblem = () => {
     const answer = document.getElementsByClassName("input_board")[0].value
+    if (answer.length === 0) return
+    document.getElementsByClassName("input_board")[0].value = ""
+
     axios({
         method: 'post',
         url: '/output/problem/view',
@@ -74,11 +78,37 @@ const viewProblem = () => {
         }
     })
         .then(response=>{
-            console.log(response)
-            document.getElementsByClassName('main_monit')[0].innerHTML = response.data.data.page
+            if (response.data.data.log === 24) {
+                window.location.replace("/light")
+            }else {
+                document.getElementsByClassName('main_monit')[0].innerHTML = response.data.data.page
+            }
         })
         .catch(error=>{
             console.log(error);
         })
+}
 
+const pageLoad = () => {
+    axios({
+        method: 'post',
+        url: '/output/pageload'
+    })
+        .then(response=>{
+            if (response.data.data.log === 24) {
+                window.location.replace("/light")
+            }else {
+                document.getElementsByClassName('main_monit')[0].innerHTML = response.data.data.page
+            }
+        })
+        .catch(error=>{
+            console.log(error);
+        })
+}
+
+const enterEvent = (event) => {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        viewProblem()
+    }
 }
