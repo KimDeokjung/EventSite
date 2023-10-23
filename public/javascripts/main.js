@@ -7,7 +7,7 @@ window.onload = function(){
 }
 let isInvenOpen = false
 
-const togleInven = () => {
+const invenLoad = () => {
     resetInven()
 
     axios({
@@ -28,7 +28,10 @@ const togleInven = () => {
         .catch(error=>{
             console.log(error);
         })
+}
 
+const togleInven = () => {
+    invenLoad()
     if (!isInvenOpen) {
         isInvenOpen = true
         document.getElementsByClassName("inven_detail")[0].style.display = "block"
@@ -78,6 +81,7 @@ const viewProblem = () => {
         }
     })
         .then(response=>{
+            invenLoad()
             if (response.data.data.log === 24) {
                 window.location.replace("/light")
             }else {
