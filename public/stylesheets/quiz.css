@@ -1,0 +1,198 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.main {
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-image: url("../images/main.png");
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.inven {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 400px;
+    height: 700px;
+}
+
+.inven_icon {
+    height: 100px;
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 30px;
+    margin-bottom: 16px;
+}
+
+.inven_icon > img {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+.inven_detail {
+    display: none;
+    height: 500px;
+    border: 1px white solid;
+    border-radius: 20px;
+    background-color: black;
+    opacity: 0.5;
+}
+
+.item_view {
+    height: 500px;
+    width: 400px;
+    background-color: white;
+    position: absolute;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 40px;
+    display: none;
+}
+
+.item_view_top {
+    margin-top: 23px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item_img > img {
+    width: 100px;
+    height: 100px;
+    margin-right: 32px;
+}
+
+.item_code {
+}
+
+.item_view_bottom {
+    margin: 26px 0;
+    height: 150px;
+    word-break: keep-all;
+
+}
+
+.item_view_bottom > img {
+    width: 100%;
+    height: 150px;
+}
+
+.item_back_btn {
+    height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 50px;
+    background-color: gray;
+    cursor: pointer;
+}
+
+.item_line {
+    display: flex;
+    box-sizing: border-box;
+    height: 100px;
+}
+
+.item_line:not(:last-child) {
+    border-bottom: white 2px solid;
+}
+
+.item {
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item_detail {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+}
+
+.item_detail > img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 4px;
+}
+
+.inven_detail > * {
+    word-break: keep-all;
+}
+
+.inven_detail > div > div:not(:last-child) {
+    border-right: white 2px solid;
+}
+
+.play_board {
+    width: 800px;
+    height: 800px;
+    border: 10px gray solid;
+}
+
+.monit {
+    width: 100%;
+    height: 720px;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.main_monit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 50px;
+    background-color: black;
+    word-break: keep-all;
+    color: white;
+    font-size: 20px;
+    overflow: auto;
+}
+
+.main_monit > img {
+    width: 200px;
+    height: 300px;
+    margin-right: 32px;
+}
+
+.input_area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input_text {
+    color: white;
+    margin-left: 16px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.input_board {
+    width: 600px;
+    height: 70px;
+    border-radius: 500px;
+    outline: none;
+    box-sizing: border-box;
+    padding: 0 40px;
+    font-size: 30px;
+}

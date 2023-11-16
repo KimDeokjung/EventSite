@@ -11,5 +11,9 @@ router.get('/light', function(req, res, next) {
   res.render('light', { title: 'Express' });
 });
 
+router.get('/quiz', function(req, res, next) {
+  res.render('quiz', { title: 'Express' });
+});
+
 
 module.exports = router;
