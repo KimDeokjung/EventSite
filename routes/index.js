@@ -15,5 +15,9 @@ router.get('/quiz', function(req, res, next) {
   res.render('quiz', { title: 'Express' });
 });
 
+router.get('/login', function(req, res, next) {
+  res.render('login', { title: 'Express' });
+});
+
 
 module.exports = router;
