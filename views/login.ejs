@@ -14,37 +14,41 @@
 </head>
 <body>
 
-<div class="container modal-open">
+<div class="container">
     <div class="first_login_btn">LogIn</div>
 
-    <div class="first_login_modal second_open third_open">
+    <div class="first_login_modal">
         <div class="first_modal_header">
             <div> </div>
-            <div>본인확인</div>
+            <div>인적사항</div>
             <div class="first_login_close_btn">X</div>
         </div>
         <div class="first_modal_body">
+            <div class="process_area">
+                <img class="process_img" src="https://velog.velcdn.com/images/kdj_cdn/post/352ed5b3-b209-4a92-ba06-7e573c99c1a7/image.png"/>
+            </div>
+
             <div>
                 <div class="input_area">
                     <div class="first_id">아이디</div>
-                    <input/>
+                    <input id="login_id"/>
                 </div>
 
                 <div class="input_area">
                     <div class="first_name">닉네임</div>
-                    <input/>
+                    <input id="login_name"/>
                 </div>
 
                 <div class="input_area">
                     <div class="first_password">비밀번호</div>
-                    <input/>
+                    <input id="login_password" type="password"/>
                 </div>
 
                 <div class="input_area">
                     <div class="first_password_check">비밀번호 확인</div>
-                    <input/>
+                    <input id="login_password_check" type="password"/>
                 </div>
-                <button class="first_value_submit_btn">
+                <button disabled class="first_value_submit_btn">
                     다음
                 </button>
             </div>
@@ -53,10 +57,13 @@
         <div class="second">
             <div class="second_modal_header">
                 <div> </div>
-                <div>본인확인</div>
+                <div>퍼즐문제</div>
                 <div class="second_login_close_btn">X</div>
             </div>
             <div class="second_modal_body">
+                <div class="process_area">
+                    <img class="process_img" src="https://velog.velcdn.com/images/kdj_cdn/post/b9fa8a9b-066d-4a15-a995-fb44f3488976/image.png"/>
+                </div>
                 <div class="second_nemo_logic">
                     <div class="second_nome_logic_row"> <div> </div> <div>2</div> <div>4</div> <div>4</div> <div>4</div> <div>2</div> </div>
                     <div class="second_nome_logic_row"> <div>1 1</div> <div> </div> <div> </div> <div> </div> <div> </div> <div> </div> </div>
@@ -65,8 +72,7 @@
                     <div class="second_nome_logic_row"> <div>3</div> <div> </div> <div> </div> <div> </div> <div> </div> <div> </div> </div>
                     <div class="second_nome_logic_row"> <div>1</div> <div> </div> <div> </div> <div> </div> <div> </div> <div> </div> </div>
                 </div>
-<!--                <button disabled class="second_value_submit_btn">-->
-                <button class="second_value_submit_btn">
+                <button disabled class="second_value_submit_btn">
                     다음
                 </button>
             </div>
@@ -75,10 +81,13 @@
         <div class="third">
             <div class="third_modal_header">
                 <div> </div>
-                <div>본인확인</div>
+                <div>상식문제</div>
                 <div class="third_login_close_btn">X</div>
             </div>
             <div class="third_modal_body">
+                <div class="process_area">
+                    <img class="process_img" src="https://velog.velcdn.com/images/kdj_cdn/post/9ab760cf-f981-4ae8-b5d9-c4b49be2f67d/image.png"/>
+                </div>
                 <div class="third_question_header">Q. <div>'물티슈'</div>의 영어표기로 알맞은 것은?</div>
 
                 <div class="third_question_answer">1. water tissue</div>
@@ -96,6 +105,15 @@
                 <button disabled class="third_value_submit_btn">
                     다음
                 </button>
+            </div>
+        </div>
+
+        <div class="fourth">
+            <div class="fin_data">
+                <img class="fin_image" src="https://velog.velcdn.com/images/kdj_cdn/post/3d621d38-a907-40ad-87c4-f01c9b3d773b/image.png"/>
+                <div class="fin_text">
+                    감사합니다!
+                </div>
             </div>
         </div>
     </div>

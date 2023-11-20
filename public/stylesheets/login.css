@@ -51,9 +51,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-weight: 900;
 }
 .first_login_modal .first_modal_body {
-  padding: 20px;
+  padding: 0 20px 20px 20px;
   font: 300 16px Lato;
 }
 
@@ -103,7 +104,10 @@ body {
   background-color: #C36000;
 }
 
-
+.first_value_submit_btn:disabled {
+  background: #DDD;
+  color: #BDBDBD;
+}
 
 .second {
   background-color: white;
@@ -127,10 +131,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-weight: 900;
 }
 
 .second .second_modal_body {
-  padding: 20px;
+  padding: 0 20px 20px 20px;
   font: 300 16px Lato;
 }
 
@@ -211,10 +216,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-weight: 900;
 }
 
 .third .third_modal_body {
-  padding: 20px;
+  padding: 0 20px 20px 20px;
   font: 300 16px Lato;
 }
 
@@ -286,4 +292,86 @@ body {
   background-color: #ff7d01;
   border-radius: 20px;
   color: white;
+}
+
+/*===========================*/
+
+.fourth {
+  background-color: white;
+  width: 100%;
+  height: 90%;
+  margin: 0;
+  padding: 0;
+  transition: all 600ms cubic-bezier(0.86, 0, 0.07, 1);
+  top: 10%;
+  position: fixed;
+  left: 100%;
+  text-align: left;
+  border-radius: 20px 20px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.first_login_modal.fourth_open .fourth {
+  left: 0;
+}
+
+.fin_data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fin_image {
+  width: 30vw;
+  height: 30vw;
+}
+
+.fin_text {
+  font-size: 2rem;
+}
+
+.char, .word {
+  display: inline-block;
+}
+.splitting .char {
+  animation: slide-in 1s cubic-bezier(0.17, 0.84, 0.4, 1.49) both;
+  animation-delay: calc(30ms * var(--char-index));
+}
+[data-word="♬"] .char {
+  display: inline;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: scale(2) rotate(60deg);
+    opacity: 0;
+  }
+}
+@keyframes bump-in {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+particule {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  box-shadow: 1px 1px 4px #eb6383;
+}
+
+.process_area {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+  margin-top: 8px;
+}
+
+.process_img {
+  height: 72px;
 }
