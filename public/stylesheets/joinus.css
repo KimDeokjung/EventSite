@@ -1,0 +1,65 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: black;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container > .first_login_btn {
+    margin: 60px;
+    padding: 20px 40px;
+    font-size: 30px;
+    border-radius: 40px;
+}
+
+.first_login_btn {
+    background: linear-gradient(to right, rgb(220, 227, 91), rgb(69, 182, 73));
+    padding: 10px 25px;
+    display: inline-block;
+    border-radius: 25px;
+    margin: 20px 0;
+    color: #fff;
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+#modalWrap {
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+#modalContent {
+    width: 100%;
+    height: 100%;
+}
+
+#modalBody {
+    width: 70%;
+    height: 80%;
+    padding: 30px 30px;
+    margin: 0 auto;
+    border: 1px solid #777;
+    background-color: #fff;
+}
+
+#closeBtn {
+    float:right;
+    font-weight: bold;
+    color: #777;
+    font-size:25px;
+    cursor: pointer;
+}

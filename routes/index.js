@@ -15,9 +15,12 @@ router.get('/quiz', function(req, res, next) {
   res.render('quiz', { title: 'Express' });
 });
 
-router.get('/login', function(req, res, next) {
+router.get('/signup', function(req, res, next) {
   res.render('login', { title: 'Express' });
 });
 
+router.get('/joinus', function(req, res, next) {
+  res.render('joinus', { title: 'Express' });
+});
 
 module.exports = router;
