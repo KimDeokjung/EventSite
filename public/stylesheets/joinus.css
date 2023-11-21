@@ -30,24 +30,25 @@ body {
     transition: all 0.4s ease;
 }
 
-#modalWrap {
+.modalWrap {
+    display: none;
     position: fixed;
     z-index: 1;
     padding-top: 100px;
     left: 0;
     top: 0;
     width: 100%;
-    height: 100%;
+    height: 70%;
     overflow: auto;
     background-color: rgba(0,0,0,0.4);
 }
 
-#modalContent {
+.modalContent {
     width: 100%;
     height: 100%;
 }
 
-#modalBody {
+.modalBody {
     width: 70%;
     height: 80%;
     padding: 30px 30px;
@@ -56,10 +57,170 @@ body {
     background-color: #fff;
 }
 
-#closeBtn {
+.closeBtn {
     float:right;
     font-weight: bold;
     color: #777;
     font-size:25px;
     cursor: pointer;
+}
+
+.first_modal_body {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.first_modal_body > div {
+    margin-bottom: 20px;
+}
+
+.first_modal_submit_btn {
+    background-color: #727171;
+    color: white;
+    width: 70%;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modalWrap_two {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 70%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modalContent_two {
+    width: 100%;
+    height: 100%;
+}
+
+.modalBody_two {
+    width: 70%;
+    height: 80%;
+    padding: 30px 30px;
+    margin: 0 auto;
+    border: 1px solid #777;
+    background-color: #fff;
+}
+
+.closeBtn_two {
+    float:right;
+    font-weight: bold;
+    color: #777;
+    font-size:25px;
+    cursor: pointer;
+}
+
+.second_modal_body {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.second_modal_submit_btn {
+    background-color: #727171;
+    color: white;
+    width: 70%;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.second_nemo_logic > div {
+    height: 13vw;
+    display: flex;
+}
+
+.second_nemo_logic > div > div {
+    width: 13vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-weight: 900;
+}
+
+.second_nemo_logic > div:not(:first-child) > div:not(:first-child) {
+    border: 1px solid black;
+    font-size: 3rem;
+}
+
+.modalWrap_three {
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 70%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modalContent_three {
+    width: 100%;
+    height: 100%;
+}
+
+.modalBody_three {
+    width: 70%;
+    height: 80%;
+    padding: 30px 30px;
+    margin: 0 auto;
+    border: 1px solid #777;
+    background-color: #fff;
+}
+
+.closeBtn_three {
+    float:right;
+    font-weight: bold;
+    color: #777;
+    font-size:25px;
+    cursor: pointer;
+}
+
+.third_modal_body {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.third_modal_submit_btn {
+    background-color: #727171;
+    color: white;
+    width: 70%;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.third_modal_quiz {
+    margin-bottom: 32px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }

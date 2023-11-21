@@ -7,3 +7,7 @@ pretty-id-fin
 pretty-puzzle-fin
 pretty-quiz-fin
 pretty-start-fin
+pretty-start-fin
+pretty-start-fin
+pretty-id-fin
+pretty-puzzle-fin
