@@ -65,6 +65,14 @@ body {
     cursor: pointer;
 }
 
+.first_modal_input_area {
+    width: 100%;
+}
+
+.first_modal_input_area > div {
+    margin-bottom: 20px;
+}
+
 .first_modal_body {
     width: 100%;
     height: 90%;
@@ -80,6 +88,16 @@ body {
 
 .first_modal_submit_btn {
     background-color: #727171;
+    color: white;
+    width: 70%;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.first_modal_submit_btn:disabled {
+    background-color: #494949;
     color: white;
     width: 70%;
     height: 35px;
@@ -143,6 +161,16 @@ body {
     margin-top: 10px;
 }
 
+.second_modal_submit_btn:disabled {
+    background-color: #494949;
+    color: white;
+    width: 70%;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .second_nemo_logic > div {
     height: 13vw;
     display: flex;
@@ -164,6 +192,7 @@ body {
 }
 
 .modalWrap_three {
+    display: none;
     position: fixed;
     z-index: 1;
     padding-top: 100px;
@@ -217,10 +246,73 @@ body {
     margin-top: 10px;
 }
 
+.third_modal_submit_btn:disabled {
+    background-color: #494949;
+    color: white;
+    width: 70%;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .third_modal_quiz {
     margin-bottom: 32px;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+}
+
+.third_question_answer_two, .third_question_answer {
+    display: flex;
+}
+
+.third_question_answer_two > div, .third_question_answer > div {
+    margin-left: 16px;
+}
+
+
+.modalWrap_four {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 70%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modalContent_four {
+    width: 100%;
+    height: 100%;
+}
+
+.modalBody_four {
+    width: 70%;
+    height: 80%;
+    padding: 30px 30px;
+    margin: 0 auto;
+    border: 1px solid #777;
+    background-color: #fff;
+}
+
+.closeBtn_four {
+    float:right;
+    font-weight: bold;
+    color: #777;
+    font-size:25px;
+    cursor: pointer;
+}
+
+.four_modal_body {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
