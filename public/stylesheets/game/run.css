@@ -1,0 +1,41 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.main {
+    width: 100vw;
+    height: 100vh;
+    background-repeat: round;
+    background-attachment: fixed;
+    background-size: cover;
+    background-image: url("../../images/run_main.png");
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.snail {
+    width: 20vw;
+    height: 20vh;
+    position: absolute;
+    bottom: 29vh;
+    left: 0;
+}
+
+.left_btn {
+    width: 20vw;
+    height: 20vh;
+    position: absolute;
+    left: 10vw;
+    bottom: 0;
+}
+
+.right_btn {
+    width: 20vw;
+    height: 20vh;
+    position: absolute;
+    right: 10vw;
+    bottom: 0;
+}

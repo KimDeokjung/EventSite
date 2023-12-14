@@ -23,4 +23,8 @@ router.get('/joinus', function(req, res, next) {
   res.render('joinus', { title: 'Express' });
 });
 
+router.get('/game/run', function(req, res, next) {
+  res.render('game/run', { title: 'Express' });
+});
+
 module.exports = router;
