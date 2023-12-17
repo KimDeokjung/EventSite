@@ -31,4 +31,8 @@ router.get('/game/upgrade', function(req, res, next) {
   res.render('game/upgrade', { title: 'Express' });
 });
 
+router.get('/game/button', function(req, res, next) {
+  res.render('game/button', { title: 'Express' });
+});
+
 module.exports = router;
