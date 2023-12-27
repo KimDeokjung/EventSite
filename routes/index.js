@@ -1,5 +1,15 @@
 var express = require('express');
+const jwt = require("jsonwebtoken");
 var router = express.Router();
+const key = "secretKeysecretKeysecretKeysecretKeysecretKeysecretKeysecretKeysecretKeysecretKeysecretKey"
+
+const decodeJWT = (data) => {
+  try {
+    return jwt.verify(data, key)
+  } catch (error) {
+    return false
+  }
+}
 
 // router.get('/', function(req, res, next) {
 //   res.cookie('rememberme', '1', { expires: new Date(Date.now() + 36000000) })
@@ -24,7 +34,17 @@ router.get('/joinus', function(req, res, next) {
 });
 
 router.get('/game/run', function(req, res, next) {
-  res.render('game/run', { title: 'Express' });
+  const log = req.cookies.log
+  const logData = decodeJWT(log)
+
+  if(logData && logData.stage > 0) {
+    res.render('game/run', { title: 'Express' });
+  }else {
+    let token = jwt.sign({stage: 0}, key, {expiresIn: "100m"});
+    res.cookie('log', token, { maxAge: 900000, httpOnly: true });
+    res.render('game/fail', { title: 'Express' });
+  }
+
 });
 
 router.get('/game/upgrade', function(req, res, next) {
@@ -33,6 +53,20 @@ router.get('/game/upgrade', function(req, res, next) {
 
 router.get('/game/button', function(req, res, next) {
   res.render('game/button', { title: 'Express' });
+});
+
+router.get('/story', function(req, res, next) {
+  res.render('story', { title: 'Express' });
+});
+
+router.get('/game/main', function(req, res, next) {
+  res.render('game/main', { title: 'Express' });
+});
+
+router.get('/game/fail', function(req, res, next) {
+  let token = jwt.sign({stage: 0}, key, {expiresIn: "100m"});
+  res.cookie('log', token, { maxAge: 900000, httpOnly: true });
+  res.render('game/fail', { title: 'Express' });
 });
 
 module.exports = router;

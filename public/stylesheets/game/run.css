@@ -16,7 +16,7 @@ body {
     justify-content: center;
 }
 
-.snail {
+.a {
     width: 20vw;
     height: 20vh;
     position: absolute;
@@ -38,4 +38,43 @@ body {
     position: absolute;
     right: 10vw;
     bottom: 0;
+}
+
+.animation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.animation span{
+    position: relative;
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+}
+
+.animation .two_text {
+    display: inline-block;
+    transform-origin: center;
+    text-align: center;
+    font-size: 2.3vw;
+    margin-bottom: 32px;
+    background: linear-gradient(to right top, #263aff, #ff0000);
+    color: transparent;
+    -webkit-background-clip: text;
+    animation: animate 1.2s infinite;
+    position: absolute;
+    bottom: 2vh;
+}
+
+@keyframes animate {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
