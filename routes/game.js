@@ -12,5 +12,6 @@ router.post('/run/c', game.checkC)
 router.post('/run/result', game.checkRunResult)
 
 router.post('/upgrade/sword', game.upgradeSword)
+router.post('/upgrade/reset', game.resetSword)
 
 module.exports = router

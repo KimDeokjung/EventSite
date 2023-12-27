@@ -89,7 +89,7 @@ exports.upgradeOne = async() => {
             "\n" +
             "            <div class=\"title\">\n" +
             "            성공확률: 70%<br/>\n" +
-            "            실패확률: 20%\n" +
+            "            실패확률: 20%<br/>\n" +
             "            하락확률: 10%\n" +
             "            </div>\n" +
             "\n" +
@@ -135,7 +135,7 @@ exports.upgradeTwo = async() => {
                 "\n" +
                 "            <div class=\"title\">\n" +
                 "            성공확률: 50%<br/>\n" +
-                "            실패확률: 30%\n" +
+                "            실패확률: 30%<br/>\n" +
                 "            하락확률: 20%\n" +
                 "            </div>\n" +
                 "\n" +
@@ -155,7 +155,7 @@ exports.upgradeTwo = async() => {
                 "\n" +
                 "            <div class=\"title\">\n" +
                 "            성공확률: 70%<br/>\n" +
-                "            실패확률: 20%\n" +
+                "            실패확률: 20%<br/>\n" +
                 "            하락확률: 10%\n" +
                 "            </div>\n" +
                 "\n" +
@@ -176,7 +176,7 @@ exports.upgradeTwo = async() => {
                 "\n" +
                 "            <div class=\"title\">\n" +
                 "            성공확률: 100%<br/>\n" +
-                "            실패확률: 0%\n" +
+                "            실패확률: 0%<br/>\n" +
                 "            </div>\n" +
                 "\n" +
                 "            <br/>\n" +
@@ -199,7 +199,7 @@ exports.upgradeThree = async() => {
                 "\n" +
                 "            <div class=\"title\">\n" +
                 "            성공확률: 100%<br/>\n" +
-                "            실패확률: 0%\n" +
+                "            실패확률: 0%<br/>\n" +
                 "            </div>\n" +
                 "\n" +
                 "            <br/>\n" +
@@ -222,8 +222,8 @@ exports.upgradeThree = async() => {
                 "\n" +
                 "            <div class=\"title\">\n" +
                 "            성공확률: 30%<br/>\n" +
-                "            실패확률: 30%\n" +
-                "            하락확률: 30%\n" +
+                "            실패확률: 30%<br/>\n" +
+                "            하락확률: 30%<br/>\n" +
                 "            초기화확률: 10%\n" +
                 "            </div>\n" +
                 "\n" +
@@ -243,7 +243,7 @@ exports.upgradeThree = async() => {
                 "\n" +
                 "            <div class=\"title\">\n" +
                 "            성공확률: 50%<br/>\n" +
-                "            실패확률: 30%\n" +
+                "            실패확률: 30%<br/>\n" +
                 "            하락확률: 20%\n" +
                 "            </div>\n" +
                 "\n" +
@@ -264,7 +264,7 @@ exports.upgradeThree = async() => {
                 "\n" +
                 "            <div class=\"title\">\n" +
                 "            성공확률: 70%<br/>\n" +
-                "            실패확률: 20%\n" +
+                "            실패확률: 20%<br/>\n" +
                 "            하락확률: 10%\n" +
                 "            </div>\n" +
                 "\n" +
@@ -310,8 +310,8 @@ exports.upgradeFour = async() => {
                 "\n" +
                 "            <div class=\"title\">\n" +
                 "            성공확률: 30%<br/>\n" +
-                "            실패확률: 10%\n" +
-                "            하락확률: 30%\n" +
+                "            실패확률: 10%<br/>\n" +
+                "            하락확률: 30%<br/>\n" +
                 "            초기화확률: 30%\n" +
                 "            </div>\n" +
                 "\n" +
@@ -331,8 +331,8 @@ exports.upgradeFour = async() => {
                 "\n" +
                 "            <div class=\"title\">\n" +
                 "            성공확률: 30%<br/>\n" +
-                "            실패확률: 30%\n" +
-                "            하락확률: 30%\n" +
+                "            실패확률: 30%<br/>\n" +
+                "            하락확률: 30%<br/>\n" +
                 "            초기화확률: 10%\n" +
                 "            </div>\n" +
                 "\n" +
@@ -353,7 +353,7 @@ exports.upgradeFour = async() => {
                 "\n" +
                 "            <div class=\"title\">\n" +
                 "            성공확률: 50%<br/>\n" +
-                "            실패확률: 30%\n" +
+                "            실패확률: 30%<br/>\n" +
                 "            하락확률: 20%\n" +
                 "            </div>\n" +
                 "\n" +
@@ -407,6 +407,7 @@ exports.upgradeFive = async() => {
         }
     }
     let result = getRandomInt(1, 10)
+    console.log(result)
     if (1 <= result && result <= 3) {
         nowSword += 1
         return {
@@ -426,8 +427,8 @@ exports.upgradeFive = async() => {
                 "\n" +
                 "            <div class=\"title\">\n" +
                 "            성공확률: 30%<br/>\n" +
-                "            실패확률: 10%\n" +
-                "            하락확률: 30%\n" +
+                "            실패확률: 10%<br/>\n" +
+                "            하락확률: 30%<br/>\n" +
                 "            초기화확률: 30%\n" +
                 "            </div>\n" +
                 "\n" +
@@ -448,8 +449,8 @@ exports.upgradeFive = async() => {
                 "\n" +
                 "            <div class=\"title\">\n" +
                 "            성공확률: 30%<br/>\n" +
-                "            실패확률: 30%\n" +
-                "            하락확률: 30%\n" +
+                "            실패확률: 30%<br/>\n" +
+                "            하락확률: 30%<br/>\n" +
                 "            초기화확률: 10%\n" +
                 "            </div>\n" +
                 "\n" +

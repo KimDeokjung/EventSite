@@ -48,7 +48,29 @@ router.get('/game/run', function(req, res, next) {
 });
 
 router.get('/game/upgrade', function(req, res, next) {
-  res.render('game/upgrade', { title: 'Express' });
+  const log = req.cookies.log
+  const logData = decodeJWT(log)
+
+  if(logData && logData.stage > 1) {
+    res.render('game/upgrade', { title: 'Express' });
+  }else {
+    let token = jwt.sign({stage: 0}, key, {expiresIn: "100m"});
+    res.cookie('log', token, { maxAge: 900000, httpOnly: true });
+    res.render('game/fail', { title: 'Express' });
+  }
+});
+
+router.get('/game/reword', function(req, res, next) {
+  const log = req.cookies.log
+  const logData = decodeJWT(log)
+
+  if(logData && logData.stage > 6) {
+    res.render('game/reword', { title: 'Express' });
+  }else {
+    let token = jwt.sign({stage: 0}, key, {expiresIn: "100m"});
+    res.cookie('log', token, { maxAge: 900000, httpOnly: true });
+    res.render('game/fail', { title: 'Express' });
+  }
 });
 
 router.get('/game/button', function(req, res, next) {

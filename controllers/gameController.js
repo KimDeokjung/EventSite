@@ -70,35 +70,47 @@ exports.upgradeSword = async(req, res, next) => {
     const log = req.cookies.log
     const logData = decodeJWT(log)
     let data
-
+    let token
     if(logData && logData.stage > 0) {
         switch (logData.stage) {
             case 2:
-                data = gameAction.upgradeOne()
+                data = await gameAction.upgradeOne()
                 break
             case 3:
-                data = gameAction.upgradeTwo()
+                data = await gameAction.upgradeTwo()
                 break
             case 4:
-                data = gameAction.upgradeThree()
+                data = await gameAction.upgradeThree()
                 break
             case 5:
-                data = gameAction.upgradeFour()
+                data = await gameAction.upgradeFour()
                 break
             case 6:
-                data = gameAction.upgradeFive()
+                data = await gameAction.upgradeFive()
                 break
             default:
-                data = gameAction.upgradeOne()
+                data = await gameAction.upgradeOne()
                 break
         }
-        let token = jwt.sign({stage: data.nowSword + 2}, key, {expiresIn: "100m"});
-        res.cookie('log', token, { maxAge: 900000, httpOnly: true });
+
+        console.log(data)
+
+        if (data.result === -1) {
+            token = jwt.sign({stage: 0}, key, {expiresIn: "100m"});
+            res.cookie('log', token, { maxAge: 900000, httpOnly: true });
+        }else {
+            token = jwt.sign({stage: data.nowSword + 2}, key, {expiresIn: "100m"});
+            res.cookie('log', token, { maxAge: 900000, httpOnly: true });
+        }
+        res.json(data);
     }else {
-        res.json("<script>window.location.replace(\"/game/button\")</script>")
+        res.json({
+            result: -1
+        })
     }
 }
 
 exports.resetSword = async(req, res, next) => {
-
+    let data = await gameAction.resetSword()
+    res.json(data)
 }
